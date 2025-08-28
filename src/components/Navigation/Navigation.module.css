@@ -1,0 +1,37 @@
+.header {
+  padding: 30px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  font-size: 40px;
+  font-weight: bolt;
+  text-transform: uppercase;
+}
+
+.link::after {
+  content: '';
+  display: block;
+  width: 95%;
+  height: 4px;
+  background-color: currentColor;
+  transform: scale(0);
+  transform-origin: center right;
+  transition: transform 400ms linear;
+}
+
+.link:hover::after {
+  transform: scale(1.1);
+  transform-origin: center left;
+}
+
+.active {
+  font-size: 40px;
+  font-weight: bolt;
+  text-transform: uppercase;
+  color: brown;
+}
